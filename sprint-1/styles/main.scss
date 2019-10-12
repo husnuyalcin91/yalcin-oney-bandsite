@@ -1,0 +1,37 @@
+// @font-face 
+
+$max-mobile-width: 426px;
+$max-tablet-width: 769px;
+// can change the above two to the same style as the one below
+// if time permits
+$desktop-width: "screen and (min-width: #{$max-tablet-width})";
+
+@mixin mobile() {
+    @media screen and (min-width: 0px) and (max-width: $max-mobile-width - 1) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media screen and (min-width: $max-mobile-width) and (max-width: $max-tablet-width - 1) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media #{$desktop-width} {
+        @content;
+    }
+}
+
+.main {
+    
+    
+    &__hero {
+        background-image: url(../images/Images/hero-bandsite.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 10rem;
+        width: 100%;
+    }
+}

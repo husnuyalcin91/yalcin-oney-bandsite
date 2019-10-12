@@ -1,1 +1,8 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+.main__hero {
+  background-image: url(../images/Images/hero-bandsite.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 10rem;
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */
