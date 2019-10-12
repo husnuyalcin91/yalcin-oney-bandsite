@@ -1,4 +1,17 @@
-// @font-face 
+@font-face {
+    font-family: "Avenir-Regular";
+    src: url("../assets/Fonts/Linotype\ -\ AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+    font-family: "Avenir-Bold";
+    src: url("../assets/Fonts/Linotype\ -\ AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+    font-family: "Avenir-Demi";
+    src: url("../assets/Fonts/Linotype\ -\ AvenirNextLTPro-Demi.otf");
+}
 
 $max-mobile-width: 426px;
 $max-tablet-width: 769px;
