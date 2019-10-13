@@ -153,6 +153,9 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
     &__wrap {
 
         @include mobile() {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             padding: 32px 16px;
         }
     }
@@ -182,6 +185,16 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         @include mobile () {
             width: 288px;
             height: 145px;
+        }
+
+        @include tablet() {
+            width: 720px;
+            height: 362px;
+        }
+
+        @include desktop() {
+            width: 896px;
+            height: 450px;
         }
     }
 
@@ -285,6 +298,16 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
             height: 162px;
             margin-bottom: 16px;
         }
+
+        @include tablet() {
+            width: 224px;
+            height: 126px;
+        }
+
+        @include desktop() {
+            width: 344px;
+            height: 193px;
+        }
     }
 
     &__footer {
@@ -310,6 +333,12 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
             font-size: $header-one-text-desk;
             line-height: $header-one-line-desk;
         }   
+    }
+
+    &__footer-icon-padding {
+        @include mobile() {
+            padding-left: 6%;
+        }
     }
 
     &__footer-info-holder {
