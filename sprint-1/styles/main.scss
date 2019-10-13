@@ -1,4 +1,4 @@
-// font-face section
+// font-face
 @font-face {
     font-family: "Avenir-Regular";
     src: url("../assets/Fonts/Linotype\ -\ AvenirNextLTPro-Regular.otf") format("opentype");
@@ -14,12 +14,16 @@
     src: url("../assets/Fonts/Linotype\ -\ AvenirNextLTPro-Demi.otf") format("opentype");
 }
 
-//page font
+//default font
 * {
     font-family: "Avenir-Regular";
 }
 
-// mobile variables
+// font variables
+$font-bold: "Avenir-Bold";
+$font-demi: "Avenir-Demi";
+
+// mobile text size and line height variables
 $header-text-mobile: 24px;
 $header-line-mobile: 32px;
 $subheader-text-mobile: 14px;
@@ -30,7 +34,7 @@ $paragraph-line-mobile: 18px;
 $labels-text-mobile: 12px;
 $labels-line-mobile: 20px;
 
-// tablet and desktop variables
+// tablet and desktop text size and line height variables
 $hero-header-text-desk: 60px;
 $hero-header-line-desk: 68px;
 $header-one-text-desk: 36px;
@@ -80,7 +84,6 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
     &__nav-bar {
         display: flex;
         flex-direction: column;
-
         background-color: #323232;
     }
 
@@ -95,9 +98,20 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
 
     &__nav-bar-list {
         display: flex;
-        flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        
+        @include mobile() {
+            font-size: $subheader-text-mobile;
+        }
+
+        @include tablet() {
+            font-size: $subheader-text-desk;
+        }
+
+        @include desktop() {
+            font-size: $subheader-text-desk;
+        }
     }
 
     &__nav-bar-list-item {
@@ -112,23 +126,55 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         background-image: url(../assets/Images/hero-bandsite.jpg);
         background-size: cover;
         background-position: center;
-
-        @include mobile() {
-            
-        }
     }
 
     &__hero-title {
         padding: 10% 5%;
         color: white;
         background-color: rgba(50, 50, 50, 0.5);
-    }
-
-    &__main-wrap {
+        font-family: $font-bold;
 
         @include mobile() {
-            margin: 32px 16px;
+            font-size: $header-text-mobile;
+            line-height: $header-line-mobile;
         }
+
+        @include tablet() {
+            font-size: $hero-header-text-desk;
+            line-height: $hero-header-line-desk;
+        }
+
+        @include desktop() {
+            font-size: $hero-header-text-desk;
+            line-height: $hero-header-line-desk;
+        }
+    }
+
+    &__wrap {
+
+        @include mobile() {
+            padding: 32px 16px;
+        }
+    }
+
+    &__info-title {
+        font-family: $font-bold;
+
+        @include mobile () {
+            font-size: $header-text-mobile;
+            line-height: $header-line-mobile;
+        }
+
+        @include tablet() {
+            font-size: $header-one-text-desk;
+            line-height: $header-one-line-desk;
+        }
+
+        @include desktop() {
+            font-size: $header-one-text-desk;
+            line-height: $header-one-line-desk;
+        }
+
     }
 
     &__bio-image {
@@ -139,11 +185,105 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         }
     }
 
+    &__info-quote {
+        font-family: $font-demi;
+
+        @include mobile () {
+            font-size: $subheader-text-mobile;
+            line-height: $subheader-line-mobile;
+        }
+
+        @include tablet() {
+            font-size: $header-two-text-desk;
+            line-height: $header-two-line-desk;
+        }
+
+        @include desktop() {
+            font-size: $header-two-text-desk;
+            line-height: $header-two-line-desk;
+        }
+    }
+
+    &__info-quote-person {
+        font-family: $font-demi;
+
+        @include mobile () {
+            font-size: $subheader-text-mobile;
+            line-height: $subheader-line-mobile;
+        }
+
+        @include tablet() {
+            font-size: $header-two-text-desk;
+            line-height: $header-two-line-desk;
+        }
+
+        @include desktop() {
+            font-size: $header-two-text-desk;
+            line-height: $header-two-line-desk;
+        }
+    }
+
+    &__info-bio-title {
+        font-family: $font-demi;
+
+        @include mobile () {
+            font-size: $subheader-text-mobile;
+            line-height: $subheader-line-mobile;
+        }
+
+        @include tablet() {
+            font-size: $header-two-text-desk;
+            line-height: $header-two-line-desk;
+        }
+
+        @include desktop() {
+            font-size: $header-two-text-desk;
+            line-height: $header-two-line-desk;
+        }
+    }
+
+    &__para-size {
+        @include mobile () {
+            font-size: $paragraph-text-mobile;
+            line-height: $paragraph-line-mobile;
+        }
+
+        @include tablet() {
+            font-size: $paragraph-text-desk;
+            line-height: $paragraph-line-desk;
+        }
+
+        @include desktop() {
+            font-size: $paragraph-text-desk;
+            line-height: $paragraph-line-desk;
+        }
+    }
+
+    &__gallery-title {
+        font-family: $font-bold;
+
+        @include mobile () {
+            font-size: $header-text-mobile;
+            line-height: $header-line-mobile;
+        }
+
+        @include tablet() {
+            font-size: $header-one-text-desk;
+            line-height: $header-one-line-desk;
+        }
+
+        @include desktop() {
+            font-size: $header-one-text-desk;
+            line-height: $header-one-line-desk;
+        }
+    }
+
     &__gallery-image {
 
         @include mobile () {
             width: 288px;
             height: 162px;
+            margin-bottom: 16px;
         }
     }
 
@@ -151,5 +291,45 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         background-color: #323232;
         color: white;
         padding: 5%;
+    }
+
+    &__footer-header {
+        font-family: $font-bold;
+
+        @include mobile () {
+            font-size: $header-text-mobile;
+            line-height: $header-line-mobile;
+        }
+
+        @include tablet() {
+            font-size: $header-one-text-desk;
+            line-height: $header-one-line-desk;
+        }
+
+        @include desktop() {
+            font-size: $header-one-text-desk;
+            line-height: $header-one-line-desk;
+        }   
+    }
+
+    &__footer-info-holder {
+        @include mobile () {
+            font-size: $paragraph-text-mobile;
+            line-height: $paragraph-line-mobile;
+        }
+
+        @include tablet() {
+            font-size: $paragraph-text-desk;
+            line-height: $lists-line-desk;
+        }
+
+        @include desktop() {
+            font-size: $paragraph-text-desk;
+            line-height: $lists-line-desk;
+        }        
+    }
+
+    &__footer-contact-names {
+        font-family: $font-bold;
     }
 }
