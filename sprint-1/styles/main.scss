@@ -1,24 +1,33 @@
+// font-face section
 @font-face {
     font-family: "Avenir-Regular";
-    src: url("../assets/Fonts/Linotype\ -\ AvenirNextLTPro-Regular.otf");
+    src: url("../assets/Fonts/Linotype\ -\ AvenirNextLTPro-Regular.otf") format("opentype");
 }
 
 @font-face {
     font-family: "Avenir-Bold";
-    src: url("../assets/Fonts/Linotype\ -\ AvenirNextLTPro-Bold.otf");
+    src: url("../assets/Fonts/Linotype\ -\ AvenirNextLTPro-Bold.otf") format("opentype");
 }
 
 @font-face {
     font-family: "Avenir-Demi";
-    src: url("../assets/Fonts/Linotype\ -\ AvenirNextLTPro-Demi.otf");
+    src: url("../assets/Fonts/Linotype\ -\ AvenirNextLTPro-Demi.otf") format("opentype");
 }
 
+//page font
+* {
+    font-family: "Avenir-Regular";
+}
+
+// variables
+
+
+// media query variables
 $max-mobile-width: 426px;
 $max-tablet-width: 769px;
-// can change the above two to the same style as the one below
-// if time permits
 $desktop-width: "screen and (min-width: #{$max-tablet-width})";
 
+// mixins with media queries
 @mixin mobile() {
     @media screen and (min-width: 0px) and (max-width: $max-mobile-width - 1) {
         @content;
@@ -37,14 +46,86 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
     }
 }
 
+// other mixins
+
+
+// styling
+
 .main {
     
+    &__nav-bar {
+        display: flex;
+        flex-direction: column;
+
+        background-color: #323232;
+    }
+
+    &__logo-link {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__logo {
+        padding-top: 5%;
+    }
+
+    &__nav-bar-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__nav-bar-list-item {
+        color: white;
+    }
+
+    &__bio-border {
+        border-bottom: 2px solid white;
+    }
     
     &__hero {
-        background-image: url(../images/Images/hero-bandsite.jpg);
+        background-image: url(../assets/Images/hero-bandsite.jpg);
         background-size: cover;
         background-position: center;
-        height: 10rem;
-        width: 100%;
+
+        @include mobile() {
+            
+        }
+    }
+
+    &__hero-title {
+        padding: 10% 5%;
+        color: white;
+        background-color: rgba(50, 50, 50, 0.5);
+    }
+
+    &__main-wrap {
+
+        @include mobile() {
+            margin: 32px 16px;
+        }
+    }
+
+    &__bio-image {
+        
+        @include mobile () {
+            width: 288px;
+            height: 145px;
+        }
+    }
+
+    &__gallery-image {
+
+        @include mobile () {
+            width: 288px;
+            height: 162px;
+        }
+    }
+
+    &__footer {
+        background-color: #323232;
+        color: white;
+        padding: 5%;
     }
 }

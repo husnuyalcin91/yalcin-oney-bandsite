@@ -1,23 +1,104 @@
 @font-face {
   font-family: "Avenir-Regular";
-  src: url("../assets/Fonts/Linotype - AvenirNextLTPro-Regular.otf");
+  src: url("../assets/Fonts/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Avenir-Bold";
-  src: url("../assets/Fonts/Linotype - AvenirNextLTPro-Bold.otf");
+  src: url("../assets/Fonts/Linotype - AvenirNextLTPro-Bold.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Avenir-Demi";
-  src: url("../assets/Fonts/Linotype - AvenirNextLTPro-Demi.otf");
+  src: url("../assets/Fonts/Linotype - AvenirNextLTPro-Demi.otf") format("opentype");
+}
+
+* {
+  font-family: "Avenir-Regular";
+}
+
+.main__nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #323232;
+}
+
+.main__logo-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main__logo {
+  padding-top: 5%;
+}
+
+.main__nav-bar-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__nav-bar-list-item {
+  color: white;
+}
+
+.main__bio-border {
+  border-bottom: 2px solid white;
 }
 
 .main__hero {
-  background-image: url(../images/Images/hero-bandsite.jpg);
+  background-image: url(../assets/Images/hero-bandsite.jpg);
   background-size: cover;
   background-position: center;
-  height: 10rem;
-  width: 100%;
+}
+
+.main__hero-title {
+  padding: 10% 5%;
+  color: white;
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+@media screen and (min-width: 0px) and (max-width: 425px) {
+  .main__main-wrap {
+    margin: 32px 16px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 425px) {
+  .main__bio-image {
+    width: 288px;
+    height: 145px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 425px) {
+  .main__gallery-image {
+    width: 288px;
+    height: 162px;
+  }
+}
+
+.main__footer {
+  background-color: #323232;
+  color: white;
+  padding: 5%;
 }
 /*# sourceMappingURL=main.css.map */
