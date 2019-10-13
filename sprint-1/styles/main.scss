@@ -51,8 +51,8 @@ $labels-text-desk: 12px;
 $labels-line-desk: 20px;
 
 // media query variables
-$max-mobile-width: 769px;
-$max-tablet-width: 1025px;
+$max-mobile-width: 426px;
+$max-tablet-width: 769px;
 $desktop-width: "screen and (min-width: #{$max-tablet-width})";
 
 // mixins with media queries
@@ -82,9 +82,24 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
 .main {
     
     &__nav-bar {
+        background-color: #323232;
+
+        @include mobile() {
         display: flex;
         flex-direction: column;
-        background-color: #323232;
+        }
+
+        @include tablet() {}
+    }
+
+    &__header-org {
+        @include tablet() {
+            height: 80px;
+        }
+
+        @include desktop() {
+            height: 80px;
+        }
     }
 
     &__logo-link {
@@ -103,10 +118,10 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
 
     &__nav-bar-list {
         display: flex;
-        justify-content: space-around;
-        align-items: center;
         
         @include mobile() {
+            justify-content: space-around;
+            align-items: center;
             font-size: $subheader-text-mobile;
         }
 
@@ -132,10 +147,17 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         background-image: url(../assets/Images/hero-bandsite.jpg);
         background-size: cover;
         background-position: center;
+
+        @include tablet() {
+            height: 400px;
+        }
+
+        @include desktop() {
+            height: 670px;
+        }
     }
 
     &__hero-title {
-        padding: 10% 5%;
         color: white;
         background-color: rgba(50, 50, 50, 0.5);
         font-family: $font-bold;
@@ -143,11 +165,13 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         @include mobile() {
             font-size: $header-text-mobile;
             line-height: $header-line-mobile;
+            padding: 10% 5%;
         }
 
         @include tablet() {
             font-size: $hero-header-text-desk;
             line-height: $hero-header-line-desk;
+            padding: 15% 5%;
         }
 
         @include desktop() {
@@ -157,12 +181,12 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
     }
 
     &__wrap {
+        padding: 32px 16px;
 
         @include mobile() {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            padding: 32px 16px;
         }
     }
 
@@ -187,20 +211,19 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
     }
 
     &__bio-image {
-        // deal with the sizes
         @include mobile () {
             width: 288px;
             height: 145px;
         }
 
         @include tablet() {
-            width: 720px;
-            height: 362px;
+            width: 90%;
+            height: 10%;
         }
 
         @include desktop() {
-            width: 896px;
-            height: 450px;
+            width: 95%;
+            height: 15%;
         }
     }
 
@@ -261,6 +284,18 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         }
     }
 
+    &__para-location {
+        @include tablet() {
+            display: flex;
+        }
+    }
+
+    &__info-bio-one {
+        @include tablet() {
+            margin-right: 24px;
+        }
+    }
+
     &__para-size {
         @include mobile () {
             font-size: $paragraph-text-mobile;
@@ -278,6 +313,25 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         }
     }
 
+    &__gallery {
+        display: flex;
+        
+        @include mobile () {
+           flex-direction: column;
+        }
+
+        @include tablet() {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @include desktop () {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+    }
+
     &__gallery-title {
         font-family: $font-bold;
 
@@ -289,6 +343,7 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         @include tablet() {
             font-size: $header-one-text-desk;
             line-height: $header-one-line-desk;
+            margin-left: 32px;
         }
 
         @include desktop() {
@@ -298,6 +353,8 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
     }
 
     &__gallery-image {
+        display: flex;
+        flex-direction: column;
 
         @include mobile () {
             width: 288px;
@@ -306,13 +363,13 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         }
 
         @include tablet() {
-            width: 224px;
-            height: 126px;
+            width: 26%;
+            margin: 24px;
         }
 
         @include desktop() {
-            width: 344px;
-            height: 193px;
+            width: 30%;
+            margin: 24px;
         }
     }
 
@@ -320,6 +377,13 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         background-color: #323232;
         color: white;
         padding: 5%;
+    }
+
+    &__footer-first-section {
+        @include tablet() {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     &__footer-header {
@@ -368,6 +432,13 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
             font-size: $paragraph-text-desk;
             line-height: $lists-line-desk;
         }        
+    }
+
+    &__footer-second-section {
+        @include tablet() {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     &__footer-contact-names {
