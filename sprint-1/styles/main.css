@@ -148,6 +148,7 @@
   .main__hero-title {
     font-size: 60px;
     line-height: 68px;
+    padding: 20% 10%;
   }
 }
 
@@ -165,6 +166,12 @@
             justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .main__wrap {
+    padding: 32px 142px;
   }
 }
 
@@ -297,6 +304,14 @@
   }
 }
 
+@media screen and (min-width: 769px) {
+  .main__para-location {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 @media screen and (min-width: 426px) and (max-width: 768px) {
   .main__info-bio-one {
     margin-right: 24px;
@@ -412,7 +427,7 @@
 
 @media screen and (min-width: 769px) {
   .main__gallery-image {
-    width: 30%;
+    width: 27%;
     margin: 24px;
   }
 }
@@ -431,6 +446,25 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .main__footer-first-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 20px;
   }
 }
 
@@ -447,6 +481,10 @@
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
   .main__footer-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
     font-size: 36px;
     line-height: 44px;
   }
@@ -493,6 +531,17 @@
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
+  .main__footer-second-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 769px) {
   .main__footer-second-section {
     display: -webkit-box;
     display: -ms-flexbox;
