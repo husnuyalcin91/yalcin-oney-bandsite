@@ -32,9 +32,18 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .main__logo-link {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .main__logo {
@@ -52,19 +61,19 @@
           align-items: center;
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
   .main__nav-bar-list {
     font-size: 14px;
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .main__nav-bar-list {
     font-size: 16px;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .main__nav-bar-list {
     font-size: 16px;
   }
@@ -91,28 +100,28 @@
   font-family: "Avenir-Bold";
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
   .main__hero-title {
     font-size: 24px;
     line-height: 32px;
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .main__hero-title {
     font-size: 60px;
     line-height: 68px;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .main__hero-title {
     font-size: 60px;
     line-height: 68px;
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
   .main__wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -130,42 +139,42 @@
   font-family: "Avenir-Bold";
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
   .main__info-title {
     font-size: 24px;
     line-height: 32px;
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .main__info-title {
     font-size: 36px;
     line-height: 44px;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .main__info-title {
     font-size: 36px;
     line-height: 44px;
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
   .main__bio-image {
     width: 288px;
     height: 145px;
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .main__bio-image {
     width: 720px;
     height: 362px;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .main__bio-image {
     width: 896px;
     height: 450px;
@@ -176,21 +185,21 @@
   font-family: "Avenir-Demi";
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
   .main__info-quote {
     font-size: 14px;
     line-height: 22px;
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .main__info-quote {
     font-size: 24px;
     line-height: 32px;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .main__info-quote {
     font-size: 24px;
     line-height: 32px;
@@ -201,21 +210,21 @@
   font-family: "Avenir-Demi";
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
   .main__info-quote-person {
     font-size: 14px;
     line-height: 22px;
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .main__info-quote-person {
     font-size: 24px;
     line-height: 32px;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .main__info-quote-person {
     font-size: 24px;
     line-height: 32px;
@@ -226,42 +235,42 @@
   font-family: "Avenir-Demi";
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
   .main__info-bio-title {
     font-size: 14px;
     line-height: 22px;
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .main__info-bio-title {
     font-size: 24px;
     line-height: 32px;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .main__info-bio-title {
     font-size: 24px;
     line-height: 32px;
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
   .main__para-size {
     font-size: 13px;
     line-height: 18px;
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .main__para-size {
     font-size: 14px;
     line-height: 22px;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .main__para-size {
     font-size: 14px;
     line-height: 22px;
@@ -272,28 +281,28 @@
   font-family: "Avenir-Bold";
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
   .main__gallery-title {
     font-size: 24px;
     line-height: 32px;
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .main__gallery-title {
     font-size: 36px;
     line-height: 44px;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .main__gallery-title {
     font-size: 36px;
     line-height: 44px;
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
   .main__gallery-image {
     width: 288px;
     height: 162px;
@@ -301,14 +310,14 @@
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .main__gallery-image {
     width: 224px;
     height: 126px;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .main__gallery-image {
     width: 344px;
     height: 193px;
@@ -325,48 +334,54 @@
   font-family: "Avenir-Bold";
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
   .main__footer-header {
     font-size: 24px;
     line-height: 32px;
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .main__footer-header {
     font-size: 36px;
     line-height: 44px;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .main__footer-header {
     font-size: 36px;
     line-height: 44px;
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
   .main__footer-icon-padding {
     padding-left: 6%;
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .main__footer-logo {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
   .main__footer-info-holder {
     font-size: 13px;
     line-height: 18px;
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .main__footer-info-holder {
     font-size: 14px;
     line-height: 20px;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .main__footer-info-holder {
     font-size: 14px;
     line-height: 20px;

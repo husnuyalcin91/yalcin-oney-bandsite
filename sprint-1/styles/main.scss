@@ -51,8 +51,8 @@ $labels-text-desk: 12px;
 $labels-line-desk: 20px;
 
 // media query variables
-$max-mobile-width: 426px;
-$max-tablet-width: 769px;
+$max-mobile-width: 769px;
+$max-tablet-width: 1025px;
 $desktop-width: "screen and (min-width: #{$max-tablet-width})";
 
 // mixins with media queries
@@ -89,7 +89,12 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
 
     &__logo-link {
         display: flex;
-        justify-content: center;
+        align-items: center;
+        padding: 5%;
+
+        @include mobile() {
+            justify-content: center;
+        }
     }
 
     &__logo {
@@ -123,6 +128,7 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
     }
     
     &__hero {
+        // fits all screen sizes
         background-image: url(../assets/Images/hero-bandsite.jpg);
         background-size: cover;
         background-position: center;
@@ -181,7 +187,7 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
     }
 
     &__bio-image {
-        
+        // deal with the sizes
         @include mobile () {
             width: 288px;
             height: 145px;
@@ -338,6 +344,12 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
     &__footer-icon-padding {
         @include mobile() {
             padding-left: 6%;
+        }
+    }
+
+    &__footer-logo {
+        @include mobile() {
+            display: none;
         }
     }
 
