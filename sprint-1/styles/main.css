@@ -21,7 +21,7 @@
   background-color: #323232;
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__nav-bar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -34,29 +34,75 @@
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
+  .main__nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .main__logo-list-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .main__logo-list-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
   .main__header-org {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px;
     height: 80px;
   }
 }
 
 @media screen and (min-width: 769px) {
   .main__header-org {
-    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 180px;
+    margin-top: 50px;
   }
 }
 
-.main__logo-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 5%;
-}
-
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__logo-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -73,7 +119,7 @@
   display: flex;
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__nav-bar-list {
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -98,6 +144,19 @@
 
 .main__nav-bar-list-item {
   color: white;
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .main__nav-bar-list-item {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .main__nav-bar-list-item {
+    margin-left: 56px;
+    margin-top: 65px;
+  }
 }
 
 .main__bio-border {
@@ -128,7 +187,7 @@
   font-family: "Avenir-Bold";
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__hero-title {
     font-size: 24px;
     line-height: 32px;
@@ -156,7 +215,7 @@
   padding: 32px 16px;
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -179,7 +238,7 @@
   font-family: "Avenir-Bold";
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__info-title {
     font-size: 24px;
     line-height: 32px;
@@ -200,7 +259,7 @@
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__bio-image {
     width: 288px;
     height: 145px;
@@ -225,7 +284,7 @@
   font-family: "Avenir-Demi";
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__info-quote {
     font-size: 14px;
     line-height: 22px;
@@ -250,7 +309,7 @@
   font-family: "Avenir-Demi";
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__info-quote-person {
     font-size: 14px;
     line-height: 22px;
@@ -275,7 +334,7 @@
   font-family: "Avenir-Demi";
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__info-bio-title {
     font-size: 14px;
     line-height: 22px;
@@ -318,7 +377,13 @@
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (min-width: 769px) {
+  .main__info-bio-one {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (max-width: 425px) {
   .main__para-size {
     font-size: 13px;
     line-height: 18px;
@@ -345,7 +410,7 @@
   display: flex;
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__gallery {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -378,7 +443,7 @@
   font-family: "Avenir-Bold";
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__gallery-title {
     font-size: 24px;
     line-height: 32px;
@@ -410,7 +475,7 @@
           flex-direction: column;
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__gallery-image {
     width: 288px;
     height: 162px;
@@ -427,7 +492,7 @@
 
 @media screen and (min-width: 769px) {
   .main__gallery-image {
-    width: 27%;
+    width: 26%;
     margin: 24px;
   }
 }
@@ -472,7 +537,7 @@
   font-family: "Avenir-Bold";
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__footer-header {
     font-size: 24px;
     line-height: 32px;
@@ -497,19 +562,19 @@
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__footer-icon-padding {
     padding-left: 6%;
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__footer-logo {
     display: none;
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .main__footer-info-holder {
     font-size: 13px;
     line-height: 18px;

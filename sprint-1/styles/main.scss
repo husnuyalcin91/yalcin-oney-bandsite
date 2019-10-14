@@ -57,7 +57,7 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
 
 // mixins with media queries
 @mixin mobile() {
-    @media screen and (min-width: 0px) and (max-width: $max-mobile-width - 1) {
+    @media screen and (max-width: $max-mobile-width - 1) {
         @content;
     }
 }
@@ -74,11 +74,7 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
     }
 }
 
-// other mixins
-
-
 // styling
-
 .main {
     
     &__nav-bar {
@@ -89,25 +85,54 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         flex-direction: column;
         }
 
-        @include tablet() {}
+        @include tablet() {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include desktop() {
+            // display: flex;
+            // flex-direction: column;
+        }
+    }
+
+    &__logo-list-container {
+        @include tablet() {
+            display: flex;
+            align-items: center;
+        }
+
+        @include desktop() {
+            display: flex;
+            align-items: center;
+            height: 80px;
+        }
+        
     }
 
     &__header-org {
         @include tablet() {
+            display: flex;
+            align-items: center;
+            padding: 20px;
             height: 80px;
         }
 
         @include desktop() {
-            height: 80px;
+            display: flex;
+            align-items: center;
+            margin-left: 180px;
+            margin-top: 50px;
         }
     }
 
     &__logo-link {
-        display: flex;
-        align-items: center;
-        padding: 5%;
+        
 
         @include mobile() {
+            display: flex;
+            align-items: center;
+            padding: 5%;
             justify-content: center;
         }
     }
@@ -136,6 +161,15 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
 
     &__nav-bar-list-item {
         color: white;
+
+        @include tablet() {
+            margin-left: 20px;
+        }
+
+        @include desktop() {
+            margin-left: 56px;
+            margin-top: 65px;
+        }
     }
 
     &__bio-border {
@@ -303,6 +337,10 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         @include tablet() {
             margin-right: 24px;
         }
+
+        @include desktop() {
+            margin-right: 24px;
+        }
     }
 
     &__para-size {
@@ -377,7 +415,7 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         }
 
         @include desktop() {
-            width: 27%;
+            width: 26%;
             margin: 24px;
         }
     }
