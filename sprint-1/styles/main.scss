@@ -75,6 +75,7 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
 }
 
 // styling
+// the root for all classes is "main"
 .main {
     
     &__nav-bar {
@@ -89,11 +90,6 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
             display: flex;
             flex-direction: column;
         }
-
-        @include desktop() {
-            // display: flex;
-            // flex-direction: column;
-        }
     }
 
     &__logo-list-container {
@@ -107,7 +103,6 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
             align-items: center;
             height: 80px;
         }
-        
     }
 
     &__header-org {
@@ -127,8 +122,6 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
     }
 
     &__logo-link {
-        
-
         @include mobile() {
             display: flex;
             align-items: center;
@@ -177,7 +170,6 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
     }
     
     &__hero {
-        // fits all screen sizes
         background-image: url(../assets/Images/hero-bandsite.jpg);
         background-size: cover;
         background-position: center;
@@ -246,7 +238,6 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
             font-size: $header-one-text-desk;
             line-height: $header-one-line-desk;
         }
-
     }
 
     &__bio-image {
@@ -376,7 +367,6 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        
     }
 
     &__gallery-title {
