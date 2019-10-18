@@ -410,6 +410,27 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         }
     }
 
+    &__comment-title {
+        font-family: $font-bold;
+
+        @include mobile () {
+            margin-left: 16px;
+            font-size: $header-text-mobile;
+            line-height: $header-line-mobile;
+        }
+
+        @include tablet() {
+            font-size: $header-one-text-desk;
+            line-height: $header-one-line-desk;
+            margin-left: 32px;
+        }
+
+        @include desktop() {
+            font-size: $header-one-text-desk;
+            line-height: $header-one-line-desk;
+        }
+    }
+
     &__footer {
         background-color: #323232;
         color: white;
