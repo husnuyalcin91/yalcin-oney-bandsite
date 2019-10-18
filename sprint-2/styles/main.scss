@@ -1,3 +1,5 @@
+// Problems to fix: 5 + 1 *special case
+
 // font-face
 @font-face {
     font-family: "Avenir-Regular";
@@ -22,6 +24,8 @@
 // font variables
 $font-bold: "Avenir-Bold";
 $font-demi: "Avenir-Demi";
+
+// move the variables to a separate file, master scss file (3/4 [next one in the html file])
 
 // mobile text size and line height variables
 $header-text-mobile: 24px;
@@ -51,6 +55,10 @@ $labels-text-desk: 12px;
 $labels-line-desk: 20px;
 
 // media query variables
+
+// change breakpoints if necessary (*/*)
+// from mobile to tablet some elements are causing white space, check that (1/4)
+
 $max-mobile-width: 426px;
 $max-tablet-width: 769px;
 $desktop-width: "screen and (min-width: #{$max-tablet-width})";
@@ -76,6 +84,10 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
 
 // styling
 // the root for all classes is "main"
+
+// margin of body = 0, have to get rid of this, figure out a way to do it without messing up everything else
+// (2/4)
+
 .main {
     
     &__nav-bar {
@@ -169,6 +181,7 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         border-bottom: 2px solid white;
     }
     
+    // height change is visible at times when resolution changes, fix it (4/4)
     &__hero {
         background-image: url(../assets/Images/hero-bandsite.jpg);
         background-size: cover;
