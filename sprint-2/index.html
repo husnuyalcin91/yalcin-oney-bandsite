@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bandsite</title>
     <link rel="stylesheet" type="text/css" href="./styles/main.css" />
-    <script type="text/javascript" src="./script.js"></script>
 </head>
 <body>
     <div class="main">
@@ -30,15 +29,15 @@
         </nav>
 
         <div class="main__wrap">
-            <section>
+            <section class="main__info">
                 <h1 class="main__info-title">About The Musicians</h1>
                 <img class="main__bio-image" src="./assets/Images/about-the-musicians.jpg" alt="a photo of the two musicians">
                 <h2 class="main__info-quote">“We are more comfortable with not
                     fighting what comes naturally. Before
                     we might have thought, ‘We need to
                     be smarter than this’”</h2>
-                <h3 class="main__info-quote-person">- Xavier de Rosnay</h3>
-                <h2 class="main__info-bio-title">Xavier de Rosnay & Gaspard Augé</h2>
+                 <h3 class="main__info-quote-person">- Xavier de Rosnay</h3>
+                 <h2 class="main__info-bio-title">Xavier de Rosnay & Gaspard Augé</h2>
                 <div class="main__para-location">
                     <p class="main__info-bio-one main__para-size">Xavier De Ronsay and Gaspard Augé had a few
                         mutual friends, who happened to run a record label,
@@ -78,20 +77,55 @@
                 <img class="main__gallery-image" src="./assets/Images/Photo-gallery-9.jpg" alt="confetti falling on a concert ground">
             </section>
         </div>
-
-        <section>
+<!-- The form section -->
+        <section class="main__form-wrap">    
             <h1 class="main__comment-title">Join the Conversation</h1>
-            <form>
-                <p></p>
-                <p></p>
-                <button></button>
-            </form>
-            <section>
-                <div>
-                    <p></p>
-                    <p></p>
+            <form class="main__form" name="Join the Conversation">
+                <img class="main__form-image" src="./assets/Images/Mohan-muruge.jpg" alt="commentator image">
+                <div class="main__name-comment-holder">
+                    <label class="main__form-name-label" for="name">NAME</label>
+                    <input class="main__form-name" type="text" placeholder="Enter your name" name="name" />
+                    <label class="main__form-comment-label" for="comment">COMMENT</label>
+                    <input class="main__form-comment" type="text" placeholder="Add a new comment" name="comment" />
+                    <button class="main__form-button" type="submit">COMMENT</button>
                 </div>
-            </section>
+            </form>
+        </section>
+
+<!-- The comments section (until the footer) will be recreated using JS -->
+        <section class="main__new-comments">
+            <!-- <div class="main__comment-container">
+                <img class="main__form-image" src="./assets/Images/Mohan-muruge.jpg" alt="commentator image">
+                <div class="main__comment">
+                    <div class="main__comment-one-container">
+                        <p class="main__comment-name">Michael Lyons</p>
+                        <p class="main__comment-date">12/18/2018</p>
+                    </div>
+                    <p class="main__comment-comment">They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.</p>
+                </div>
+            </div>
+
+            <div class="main__comment-container">
+                <img class="main__form-image" src="./assets/Images/Mohan-muruge.jpg" alt="commentator image">
+                <div class="main__comment">
+                    <div class="main__comment-one-container">
+                        <p class="main__comment-name">Michael Lyons</p>
+                        <p class="main__comment-date">12/18/2018</p>
+                    </div>
+                    <p class="main__comment-comment">They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.</p>
+                </div>
+            </div>
+
+            <div class="main__comment-container">
+                <img class="main__form-image" src="./assets/Images/Mohan-muruge.jpg" alt="commentator image">
+                <div class="main__comment">
+                    <div class="main__comment-one-container">
+                        <p class="main__comment-name">Michael Lyons</p>
+                        <p class="main__comment-date">12/18/2018</p>
+                    </div>
+                    <p class="main__comment-comment">They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.</p>
+                </div>
+            </div>                 -->
         </section>
 
         <footer class="main__footer">
@@ -125,5 +159,6 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>

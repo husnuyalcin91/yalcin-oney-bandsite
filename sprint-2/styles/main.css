@@ -17,6 +17,10 @@
   font-family: "Avenir-Regular";
 }
 
+body {
+  margin: 0;
+}
+
 .main__nav-bar {
   background-color: #323232;
 }
@@ -212,7 +216,7 @@
 }
 
 .main__wrap {
-  padding: 32px 16px;
+  padding: 32px;
 }
 
 @media screen and (max-width: 425px) {
@@ -262,7 +266,7 @@
 @media screen and (max-width: 425px) {
   .main__bio-image {
     width: 288px;
-    height: 145px;
+    height: 162px;
   }
 }
 
@@ -497,6 +501,12 @@
   }
 }
 
+@media screen and (max-width: 425px) {
+  .main__form-wrap {
+    margin-left: 16px;
+  }
+}
+
 .main__comment-title {
   font-family: "Avenir-Bold";
 }
@@ -521,6 +531,97 @@
   .main__comment-title {
     font-size: 36px;
     line-height: 44px;
+  }
+}
+
+.main__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 425px) {
+  .main__form-image {
+    margin-left: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main__name-comment-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main__form-name {
+    margin-bottom: 20px;
+    width: 224px;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main__form-comment {
+    width: 224px;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main__form-button {
+    margin-top: 10px;
+    width: 228px;
+    border: 1px solid black;
+    border-radius: 4px;
+    color: white;
+    background-color: #323232;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main__new-comments {
+    margin-top: 32px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main__comment-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 24px 16px;
+    border-top: 1px solid #323232;
+    padding-top: 24px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main__comment {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main__comment-one-container {
+    width: 88%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
