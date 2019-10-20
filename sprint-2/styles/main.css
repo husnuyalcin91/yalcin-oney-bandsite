@@ -552,6 +552,24 @@ body {
   }
 }
 
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .main__form-image {
+    margin-left: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .main__form-image {
+    margin-left: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .main__name-comment-holder {
     display: -webkit-box;

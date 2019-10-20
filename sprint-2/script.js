@@ -1,4 +1,4 @@
-// declared a variable to shorten the 
+// declared a variable to shorten the creation process
 let newComments = document.querySelector(".main__new-comments");
 // console.log(newComments);
 
@@ -16,23 +16,30 @@ let comments = [
 ];
 // console.log(comments);
 
-let mainForm = document.querySelector(".main__form-wrap");
-// console.log(mainForm);
+let mainForm = document.querySelector(".main__form");
 // to avoid the submit event to refresh the page
-mainForm.addEventListener("submit",(eventForm => {
-    eventForm.preventDefault();
+mainForm.addEventListener("submit",(e => {
+    e.preventDefault();
 
-    // let inputName = eventForm.target.name.value;
-    // comments.push(inputName);
+// to push a comment to be displayed on the website
 
-    // let inputComment = eventForm.target.comment.value;
-    // comments.push(inputComment);
+    let inputName = e.target.name.value;
+    comments.push(inputName);
 
-    newComments.innerHTML = ("");
-// for loop
-    for (let i = 0; i <= comments.length - 1, i++;) {
-        return firstComment(comments[i]);
-    }
+    let inputComment = e.target.comment.value;
+    comments.push(inputComment);
+
+    newComments.innerHTML = (" ");
+
+    // comments.push(firstComment());
+    // comments.push(secondComment());
+    // comments.push(thirdComment());
+
+    // document.querySelector('.main-comment-holder').innerHTML = (" ");
+
+    // for loop to push the existing comments
+    // for (let i = 0; i <= comments.length - 1; i++);
+    
 }))
 
 // creation of elements
@@ -40,34 +47,46 @@ mainForm.addEventListener("submit",(eventForm => {
 function firstComment() {
 
     let mainCommentContainer = document.createElement('div');
-    mainCommentContainer.className = 'main__comment-container';
+    // mainCommentContainer.classList.add('main__comment-container');
+    mainCommentContainer.setAttribute('class','main__comment-container');
     newComments.appendChild(mainCommentContainer);
 
     let mainFormImage = document.createElement('img');
-    mainFormImage.className = 'main__form-image';
-    // mainFormImage.setAttribute('src', 'assets/Images/Mohan.muruge.jpg');
+    mainFormImage.src = "assets/Images/Mohan.muruge.jpg";
+    // mainFormImage.className = 'main__form-image';
+    mainFormImage.classList.add('main__form-image');
     document.querySelector('.main__comment-container').appendChild(mainFormImage);
 
     let mainComment = document.createElement('div');
-    mainComment.className = 'main__comment';
+    // mainComment.className = 'main__comment';
+    mainComment.classList.add('main__comment');
+    mainComment.setAttribute('class','main__comment');
     document.querySelector('.main__comment-container').appendChild(mainComment);
 
     let mainCommentOneContainer = document.createElement('div');
-    mainCommentOneContainer.className = 'main__comment-one-container';
+    // mainCommentOneContainer.className = 'main__comment-one-container';
+    // mainCommentOneContainer.classList.add('main__comment-one-container');
+    mainCommentOneContainer.setAttribute('class','main__comment-one-container');
     document.querySelector('.main__comment').appendChild(mainCommentOneContainer);
 
     let mainCommentName = document.createElement('p');
-    mainCommentName.className = 'main__comment-name';
+    // mainCommentName.className = 'main__comment-name';
+    // mainCommentName.classList.add('main__comment-name');
+    mainCommentName.setAttribute('class','main__comment-name');
     mainCommentName.innerText = comments[0].name;
     document.querySelector('.main__comment-one-container').appendChild(mainCommentName);
 
     let mainCommentDate = document.createElement('p');
-    mainCommentDate.className = "main__comment-date";
+    // mainCommentDate.className = "main__comment-date";
+    // mainCommentDate.classList.add('main__comment-date');
+    mainCommentDate.setAttribute('class','main__comment-date');
     mainCommentDate.innerText = comments[0].date;
     document.querySelector('.main__comment-one-container').appendChild(mainCommentDate);
 
     let mainCommentComment = document.createElement('p');
-    mainCommentComment.className = 'main__comment-comment';
+    // mainCommentComment.className = 'main__comment-comment';
+    // mainCommentComment.classList.add('main__comment-comment');
+    mainCommentComment.setAttribute('class','main__comment-comment');
     mainCommentComment.innerText = comments[0].comment;
     document.querySelector('.main__comment-one-container').appendChild(mainCommentComment);
     }
@@ -112,7 +131,7 @@ function secondComment() {
     
     // secondComment();
 
-    // second new comment
+    // third new comment
 function thirdComment() {
 
     let mainCommentContainer = document.createElement('div');
@@ -150,5 +169,6 @@ function thirdComment() {
     
     // thirdComment();
 
+    // console.log(newComments);
 
 

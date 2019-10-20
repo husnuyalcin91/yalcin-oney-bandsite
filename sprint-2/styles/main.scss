@@ -439,7 +439,7 @@ body {
         }
     }
 
-    // form styles
+    // form
     &__form-wrap {
         @include mobile() {
             margin-left: 16px;
@@ -473,6 +473,20 @@ body {
 
     &__form-image {
         @include mobile() {
+            margin-left: 16px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        @include tablet() {
+            margin-left: 16px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        @include desktop() {
             margin-left: 16px;
             width: 40px;
             height: 40px;
@@ -516,7 +530,7 @@ body {
         }
     }
 
-    // js comment section styling
+    // js comment section
     &__new-comments {
         @include mobile() {
             margin-top: 32px;
@@ -546,10 +560,7 @@ body {
         }
     }
 
-
-    // js comment section ending
-
-
+    
     &__footer {
         background-color: #323232;
         color: white;
