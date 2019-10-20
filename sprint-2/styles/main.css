@@ -173,7 +173,7 @@ body {
 
 .main__hero {
   background-image: url(../assets/Images/hero-bandsite.jpg);
-  background-size: cover;
+  background-size: auto 100%;
   background-position: center;
 }
 
@@ -191,7 +191,6 @@ body {
 
 .main__hero-title {
   color: white;
-  background-color: rgba(50, 50, 50, 0.5);
   font-family: "Avenir-Bold";
 }
 

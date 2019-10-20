@@ -193,7 +193,7 @@ body {
     // height change is visible at times when resolution changes, fix it (3/3)
     &__hero {
         background-image: url(../assets/Images/hero-bandsite.jpg);
-        background-size: cover;
+        background-size: auto 100%;
         background-position: center;
 
         @include tablet() {
@@ -207,7 +207,6 @@ body {
 
     &__hero-title {
         color: white;
-        background-color: rgba(50, 50, 50, 0.5);
         font-family: $font-bold;
 
         @include mobile() {

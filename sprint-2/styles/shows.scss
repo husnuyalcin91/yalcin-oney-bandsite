@@ -88,11 +88,59 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         }
     }
 
+    &__hero-shows {
+        background-image: url(../assets/Images/shows-hero.jpg);
+        background-size: auto 100%;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet() {
+            height: 400px;
+        }
+
+        @include desktop() {
+            height: 670px;
+        }
+    }
+
     &__hero-desc {
         color: white;
 
         @include mobile() {
-            padding: 10% 5%;
+            padding: 5%;
+            margin-bottom: 0;
+        }
+    }
+
+    &__hero-title-shows {
+        color: white;
+        font-family: $font-bold;
+
+        @include mobile() {
+            font-size: $header-text-mobile;
+            line-height: $header-line-mobile;
+            padding: 5%;
+            margin-top: 0;
+        }
+
+        @include tablet() {
+            font-size: $hero-header-text-desk;
+            line-height: $hero-header-line-desk;
+            padding: 15% 5%;
+        }
+
+        @include desktop() {
+            font-size: $hero-header-text-desk;
+            line-height: $hero-header-line-desk;
+            padding: 20% 10%;
+        }
+    }
+
+    &__music {
+        @include mobile() {
+            width: 88%;
+            margin-bottom: 30px;
         }
     }
 
@@ -102,7 +150,88 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
 
         @include mobile() {
             flex-direction: column;
-            margin: 0 16px 20px;
+            margin: 70px 16px 20px;
+        }
+    }
+
+    &__shows-title {
+        @include mobile() {
+            font-size: $header-text-mobile;
+            font-family: $font-bold;
+        }
+
+        @include tablet() {
+            font-size: $header-one-text-desk;
+            font-family: $font-bold;
+        }
+
+        @include desktop() {
+            font-size: $header-one-text-desk;
+            font-family: $font-bold;
+        }
+    }
+
+    &__show {
+        @include mobile() {
+            border-bottom: 1px solid grey;
+            margin-right: 16px;
+            margin-left: 16px;
+        }
+    }
+
+    &__h-three-font {
+        @include mobile() {
+            font-size: $subheader-text-mobile;
+            font-family: $font-demi;
+        }
+
+        @include tablet() {
+            font-size: $subheader-text-desk;
+            font-family: $font-demi;
+        }
+
+        @include desktop() {
+            font-size: $subheader-text-desk;
+            font-family: $font-demi;
+        }
+    }
+
+    &__date {
+        @include mobile() {
+            font-size: $subheader-text-mobile;
+            font-family: $font-demi;
+        }
+
+        @include tablet() {
+            font-size: $subheader-text-desk;
+            font-family: $font-demi;
+        }
+
+        @include desktop() {
+            font-size: $subheader-text-desk;
+            font-family: $font-demi;
+        }
+    }
+
+    &__p-font {
+        @include mobile() {
+            font-size: $paragraph-text-mobile;
+        }
+
+        @include tablet() {
+            font-size: $paragraph-text-desk;
+        }
+
+        @include desktop() {
+            font-size: $paragraph-text-desk;
+        }
+    }
+
+    &__tickets {
+        @include mobile() {
+            background-color: #323232;
+            color: white;
+            width: 288px;
         }
     }
 }
