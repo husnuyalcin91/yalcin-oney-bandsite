@@ -173,7 +173,7 @@ body {
 
 .main__hero {
   background-image: url(../assets/Images/hero-bandsite.jpg);
-  background-size: auto 100%;
+  background-size: contain;
   background-position: center;
 }
 
