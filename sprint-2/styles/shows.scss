@@ -1,0 +1,108 @@
+// font-face
+@font-face {
+    font-family: "Avenir-Regular";
+    src: url("../assets/Fonts/Linotype\ -\ AvenirNextLTPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Avenir-Bold";
+    src: url("../assets/Fonts/Linotype\ -\ AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Avenir-Demi";
+    src: url("../assets/Fonts/Linotype\ -\ AvenirNextLTPro-Demi.otf") format("opentype");
+}
+
+//default font
+* {
+    font-family: "Avenir-Regular";
+}
+
+// font variables
+$font-bold: "Avenir-Bold";
+$font-demi: "Avenir-Demi";
+
+// move the variables to a separate file, master scss file (2/3)
+
+// mobile text size and line height variables
+$header-text-mobile: 24px;
+$header-line-mobile: 32px;
+$subheader-text-mobile: 14px;
+$subheader-line-mobile: 22px;
+//paragraphs and lists and contact info have the same text size and line height
+$paragraph-text-mobile: 13px;
+$paragraph-line-mobile: 18px;
+$labels-text-mobile: 12px;
+$labels-line-mobile: 20px;
+
+// tablet and desktop text size and line height variables
+$hero-header-text-desk: 60px;
+$hero-header-line-desk: 68px;
+$header-one-text-desk: 36px;
+$header-one-line-desk: 44px;
+$header-two-text-desk: 24px;
+$header-two-line-desk: 32px;
+$subheader-text-desk: 16px;
+$subheader-line-desk: 24px;
+// lists and contact info text size is the same as paragraph text size
+$paragraph-text-desk: 14px;
+$paragraph-line-desk: 22px;
+$lists-line-desk: 20px;
+$labels-text-desk: 12px;
+$labels-line-desk: 20px;
+
+// media query variables
+
+// change breakpoints if necessary (*/*)
+// from mobile to tablet some elements are causing white space, check that (1/3)
+
+$max-mobile-width: 426px;
+$max-tablet-width: 769px;
+$desktop-width: "screen and (min-width: #{$max-tablet-width})";
+
+// mixins with media queries
+@mixin mobile() {
+    @media screen and (max-width: $max-mobile-width - 1) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media screen and (min-width: $max-mobile-width) and (max-width: $max-tablet-width - 1) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media #{$desktop-width} {
+        @content;
+    }
+}
+
+//styling
+.main {
+    &__nav-bar {
+        @include mobile() {
+            height: 472px;
+        }
+    }
+
+    &__hero-desc {
+        color: white;
+
+        @include mobile() {
+            padding: 10% 5%;
+        }
+    }
+
+    &__shows-wrap {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include mobile() {
+            flex-direction: column;
+            margin: 0 16px 20px;
+        }
+    }
+}

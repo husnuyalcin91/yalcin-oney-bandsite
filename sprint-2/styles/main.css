@@ -167,6 +167,10 @@ body {
   border-bottom: 2px solid white;
 }
 
+.main__nav-bar-item-opacity {
+  color: grey;
+}
+
 .main__hero {
   background-image: url(../assets/Images/hero-bandsite.jpg);
   background-size: cover;
