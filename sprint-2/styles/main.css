@@ -544,6 +544,12 @@ body {
   display: flex;
 }
 
+@media screen and (min-width: 769px) {
+  .main__form {
+    margin-left: 90px;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .main__form-image {
     margin-left: 16px;

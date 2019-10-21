@@ -18,28 +18,24 @@ let comments = [
 
 let mainForm = document.querySelector(".main__form");
 // to avoid the submit event to refresh the page
-mainForm.addEventListener("submit",(e => {
-    e.preventDefault();
+mainForm.addEventListener("submit",(event => {
+    event.preventDefault();
 
 // to push a comment to be displayed on the website
-
-    let inputName = e.target.name.value;
+    let inputName = event.target.name.value;
     comments.push(inputName);
 
-    let inputComment = e.target.comment.value;
+    let inputComment = event.target.comment.value;
     comments.push(inputComment);
 
-    newComments.innerHTML = (" ");
+// to clear the NAME and COMMENT sections once a new comment is posted
+    // newComments.innerHTML = (" ");
 
-    // comments.push(firstComment());
-    // comments.push(secondComment());
-    // comments.push(thirdComment());
-
-    // document.querySelector('.main-comment-holder').innerHTML = (" ");
-
-    // for loop to push the existing comments
-    // for (let i = 0; i <= comments.length - 1; i++);
-    
+// for loop to push the existing comments
+    for (let i = 0; i <= comments.length - 1; i++);
+        comments.push(firstComment());
+        comments.push(secondComment());
+        comments.push(thirdComment());
 }))
 
 // creation of elements
@@ -52,7 +48,7 @@ function firstComment() {
     newComments.appendChild(mainCommentContainer);
 
     let mainFormImage = document.createElement('img');
-    mainFormImage.src = "assets/Images/Mohan.muruge.jpg";
+    // mainFormImage.src = "assets/Images/Mohan.muruge.jpg";
     // mainFormImage.className = 'main__form-image';
     mainFormImage.classList.add('main__form-image');
     document.querySelector('.main__comment-container').appendChild(mainFormImage);
@@ -131,7 +127,7 @@ function secondComment() {
     
     // secondComment();
 
-    // third new comment
+// third new comment
 function thirdComment() {
 
     let mainCommentContainer = document.createElement('div');
@@ -168,5 +164,5 @@ function thirdComment() {
     }
     
     // thirdComment();
-
+    
     // console.log(newComments);
