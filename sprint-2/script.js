@@ -170,5 +170,3 @@ function thirdComment() {
     // thirdComment();
 
     // console.log(newComments);
-
-
