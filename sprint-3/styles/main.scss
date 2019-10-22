@@ -176,6 +176,10 @@ body {
         border-bottom: 2px solid white;
     }
 
+    &__no-underline {
+        text-decoration: none;
+    }
+
     &__nav-bar-item-opacity {
         color: grey;
     }

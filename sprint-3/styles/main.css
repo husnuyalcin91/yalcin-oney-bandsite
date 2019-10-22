@@ -167,6 +167,10 @@ body {
   border-bottom: 2px solid white;
 }
 
+.main__no-underline {
+  text-decoration: none;
+}
+
 .main__nav-bar-item-opacity {
   color: grey;
 }
