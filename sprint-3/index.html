@@ -79,55 +79,23 @@
                 <img class="main__gallery-image" src="./assets/Images/Photo-gallery-9.jpg" alt="confetti falling on a concert ground">
             </section>
         </div>
-<!-- The form section -->
+
         <section class="main__form-wrap">    
             <h1 class="main__comment-title">Join the Conversation</h1>
             <form class="main__form" name="Join the Conversation">
                 <img class="main__form-image" src="./assets/Images/Mohan-muruge.jpg" alt="commentator image">
                 <div class="main__name-comment-holder">
                     <label class="main__form-name-label" for="name">NAME</label>
-                    <input class="main__form-name" type="text" value="" placeholder="Enter your name" name="name" />
+                    <input class="main__form-name" type="text" placeholder="Enter your name" name="user_name" />
                     <label class="main__form-comment-label" for="comment">COMMENT</label>
-                    <textarea class="main__form-comment" type="text" value="" placeholder="Add a new comment" name="comment"></textarea>
+                    <textarea class="main__form-comment" type="text" placeholder="Add a new comment" name="comment_name"></textarea>
                     <button class="main__form-button" type="submit">COMMENT</button>
                 </div>
             </form>
         </section>
 
         <section class="main__new-comments">
-            <!-- The comments section (until the footer) will be recreated using JS -->
-            <!-- <div class="main__comment-container">
-                <img class="main__form-image" src="./assets/Images/Mohan-muruge.jpg" alt="commentator image">
-                <div class="main__comment">
-                    <div class="main__comment-one-container">
-                        <p class="main__comment-name">Michael Lyons</p>
-                        <p class="main__comment-date">12/18/2018</p>
-                    </div>
-                    <p class="main__comment-comment">They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.</p>
-                </div>
-            </div>
-
-            <div class="main__comment-container">
-                <img class="main__form-image" src="./assets/Images/Mohan-muruge.jpg" alt="commentator image">
-                <div class="main__comment">
-                    <div class="main__comment-one-container">
-                        <p class="main__comment-name">Michael Lyons</p>
-                        <p class="main__comment-date">12/18/2018</p>
-                    </div>
-                    <p class="main__comment-comment">They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.</p>
-                </div>
-            </div>
-
-            <div class="main__comment-container">
-                <img class="main__form-image" src="./assets/Images/Mohan-muruge.jpg" alt="commentator image">
-                <div class="main__comment">
-                    <div class="main__comment-one-container">
-                        <p class="main__comment-name">Michael Lyons</p>
-                        <p class="main__comment-date">12/18/2018</p>
-                    </div>
-                    <p class="main__comment-comment">They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.</p>
-                </div>
-            </div>                 -->
+            
         </section>
 
         <footer class="main__footer">
@@ -161,6 +129,9 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js" 
+    integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" 
+    crossorigin="anonymous"></script>
     <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>

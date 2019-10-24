@@ -1,3 +1,6 @@
+//axios
+
+
 // declared a variable to shorten the creation process
 let newComments = document.querySelector('.main__new-comments');
 // console.log(newComments);
@@ -21,13 +24,14 @@ let mainForm = document.querySelector(".main__form");
 mainForm.addEventListener("submit",(event => {
     event.preventDefault();
 // for loop to create the elements & push the existing comments
+// const displayComments = () => {
     for (let i = 0; i <= comments.length - 1; i++) {
         let mainCommentContainer = document.createElement('div');
-        mainCommentContainer.className = 'main__comment-container';
+        mainCommentContainer.classList.add('main__comment-container');
         newComments.appendChild(mainCommentContainer);
 
         let mainFormImage = document.createElement('img');
-        // mainFormImage.src = "assets/Images/Mohan.muruge.jpg";
+        // mainFormImage.src = "";
         mainFormImage.className = 'main__form-image';
         document.querySelector('.main__comment-container').appendChild(mainFormImage);
 
@@ -45,7 +49,7 @@ mainForm.addEventListener("submit",(event => {
         document.querySelector('.main__comment-one-container').appendChild(mainCommentName);
 
         let mainCommentDate = document.createElement('p');
-        mainCommentDate.className = "main__comment-date";
+        mainCommentDate.className = 'main__comment-date';
         mainCommentDate.innerText = comments[i].date;
         document.querySelector('.main__comment-one-container').appendChild(mainCommentDate);
 
@@ -53,18 +57,16 @@ mainForm.addEventListener("submit",(event => {
         mainCommentComment.className = 'main__comment-comment';
         mainCommentComment.innerText = comments[i].comment;
         document.querySelector('.main__comment-one-container').appendChild(mainCommentComment);
-    }
+    // } // closing curly brace of displayComments function
+};
     // to push a comment to be displayed on the website
-    function addComment () {
-        let inputName = event.target.name.value;
-        let inputComment = event.target.comment.value;
-        comments.push(inputName, inputComment);
-        return comments;
-    }
+        let nameInput = event.target.user_name;
+        let nameValue = nameInput.value;
+        let commentInput = event.target.comment_name;
+        let commentValue = commentInput.value;
+        comments.push(nameInput, commentInput);
 
     // to clear the NAME and COMMENT sections once a new comment is posted
-    // newComments.innerHTML = (" ");
+    
         
 }))
-
-// mainForm();
