@@ -3,7 +3,9 @@
 //(2) prevent axios.post comment from posting everytime the page reloads
 //(3) ensure preventDefault and posting a comment through the website form works
 //(4) make sure the last comment displays at the top
-//(5) replace html shows with js shows according to the data provided by the api
+//(5) make the date to appear on shows js
+//(6) deal with the alignment issue with the shows page display
+//(7) remove the console log`s at the end
 
 // variables
 let api = 'https://project-1-api.herokuapp.com';
@@ -86,28 +88,6 @@ displayComments = (object) => {
     
 // })
 // .get(`${api}/comments?api_key=${apiKey}`)
-
-// axios get - showdates
-getShowDates = () => {
-    axios.get(`${api}/showdates?api_key=${apiKey}`)
-    .then(response => {
-        // console.log(response);
-        const showDates = response.data;
-        // console.log(showDates)
-        showDates.forEach( show => {
-            shows(show)
-        })
-    })
-    .catch (error => {
-        console.log(error);
-    })
-};
-
-getShowDates();
-
-shows = (object) => {
-
-}
 
 
 // // sprint 2 below here
