@@ -1,21 +1,15 @@
 //to-do list
-//(1) replace the timestamp values with actual dates
-//(2) prevent axios.post comment from posting everytime the page reloads
-//(3) ensure preventDefault and posting a comment through the website form works
-//(4) make sure the last comment displays at the top
-//(5) make the date to appear on shows js
-//(6) deal with the alignment issue with the shows page display
-//(7) remove the console log`s at the end
+//(1) prevent axios.post comment from posting everytime the page reloads
+//(2) ensure preventDefault and posting a comment through the website form works
+//(3) make sure the last comment displays at the top
+//(4) make the date to appear on shows js
+//(5) deal with the alignment issue with the shows page display
+//(6) remove the console log`s at the end
 
 // variables
 let api = 'https://project-1-api.herokuapp.com';
 // apiKey retrieved using the browser
 let apiKey = 'aa9aa8c6-78b6-4300-8414-e8c9e176d654';
-
-// dates
-let d = new Date(1530744338878);
-new Date(`${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()}`);
-console.log(d);
 
 // axios - get comments
 getComments = () => {
@@ -68,7 +62,9 @@ displayComments = (object) => {
 
     // creation of the comment date
     let mainCommentDate = document.createElement("p");
-    mainCommentDate.innerText = object.timestamp;
+    let d = object.timestamp;
+    let newD = moment(d).calendar();
+    mainCommentDate.innerText = newD;
     mainCommentDate.classList.add('main__comment-date');
     mainCommentOneContainer.appendChild(mainCommentDate);
 
