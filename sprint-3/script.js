@@ -1,40 +1,30 @@
 // variables
 // retrieved the api key from the browser
-
+let api = 'https://project-1-api.herokuapp.com';
+// apiKey retrieved using the browser
+let apiKey = 'aa9aa8c6-78b6-4300-8414-e8c9e176d654';
 
 // axios - get, post
-getApiKey = () => {
-    axios.get('https://project-1-api.herokuapp.com/register')
+getComments = () => {
+    axios.get(`${api}/comments?api_key=${apiKey}`)
     .then(result => {
-        console.log(result);
-        // const apiKey = result.data.api_key;  
+        // console.log(result);
+        const defaultComments = result.data;
+        console.log(defaultComments)
+        defaultComments.forEach( comm => {
+            displayComments(comm)
+        })
     })
     .catch (error => {
         console.log(error);
     })
+};
+
+getComments();
+
+displayComments = (object) => {
+    
 }
-
-// declare api with api key as global variable
-
-// getComments = () => {
-//     axios.get('')
-//     .then(result => {
-//         // console.log(result);
-//         const defaultComments = result.data.comments;
-//         defaultComments.forEach( comm => {
-//             displayComments(comm)
-//         })
-//     })
-//     .catch (error => {
-//         console.log(error);
-//     })
-// };
-
-// getComments();
-
-// displayComments = (object) => {
-//     //move the containers starting from 64 to here
-// }
 
 // // sprint 2 below here
 
@@ -45,7 +35,7 @@ getApiKey = () => {
 // // console.log(newComments);
 
 // // declared an array so that the people, the date they commented and their comments can be later looped
-// let comments = [
+// let oldComments = [
 //     { name: 'Michael Lyons', 
 //     date: '12/18/2018',
 //     comment: 'They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.'},
@@ -56,7 +46,7 @@ getApiKey = () => {
 //     date: '11/15/2018', 
 //     comment: 'How can someone be so good!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He`s definitely my favorite ever!'}
 // ];
-// // console.log(comments);
+// // console.log(oldComments);
 
 // let mainForm = document.querySelector(".main__form");
 // // to avoid the submit event to refresh the page
