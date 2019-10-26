@@ -1,10 +1,14 @@
-// variables
+// dates
+let d = new Date(1530744338878);
+new Date(`${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()}`);
+console.log(d);
+
 // retrieved the api key from the browser
 let api = 'https://project-1-api.herokuapp.com';
 // apiKey retrieved using the browser
 let apiKey = 'aa9aa8c6-78b6-4300-8414-e8c9e176d654';
 
-// axios - get, post
+// axios - get comments
 getComments = () => {
     axios.get(`${api}/comments?api_key=${apiKey}`)
     .then(result => {
@@ -23,8 +27,54 @@ getComments = () => {
 getComments();
 
 displayComments = (object) => {
-    
-}
+    // declare the section variable
+    let mainNewComments = document.querySelector(".main__new-comments");
+
+    // creation of the main comment container
+    let mainCommentContainer = document.createElement("div");
+    mainCommentContainer.classList.add('main__comment-container');
+    mainNewComments.appendChild(mainCommentContainer);
+
+    // creation of the form image
+    let mainFormImage = document.createElement("img");
+    mainFormImage.setAttribute('src', 'assets/Images/Mohan-muruge.jpg');
+    mainFormImage.classList.add('main__form-image');
+    mainCommentContainer.appendChild(mainFormImage);
+
+    // creation of the comment div
+    let mainComment = document.createElement("div");
+    mainComment.classList.add('main__comment');
+    mainCommentContainer.appendChild(mainComment);
+
+    // creation of the secondary comment container
+    let mainCommentOneContainer = document.createElement("div");
+    mainCommentOneContainer.classList.add('main__comment-one-container');
+    mainComment.appendChild(mainCommentOneContainer);
+
+    // creation of the commentator name
+    let mainCommentName = document.createElement("p");
+    mainCommentName.innerText = object.name;
+    mainCommentName.classList.add('main__comment-name');
+    mainCommentOneContainer.appendChild(mainCommentName);
+
+    // creation of the comment date
+    let mainCommentDate = document.createElement("p");
+    mainCommentDate.innerText = object.timestamp;
+    mainCommentDate.classList.add('main__comment-date');
+    mainCommentOneContainer.appendChild(mainCommentDate);
+
+    // creation of the comment
+    let mainCommentComment = document.createElement("p");
+    mainCommentComment.innerText = object.comment;
+    mainCommentComment.classList.add('main__comment-comment');
+    mainComment.appendChild(mainCommentComment);
+};
+
+displayComments();
+
+// axios - post comments
+
+
 
 // // sprint 2 below here
 
@@ -53,8 +103,11 @@ displayComments = (object) => {
 // mainForm.addEventListener("submit",(event => {
 //     event.preventDefault();
 // // for loop to create the elements & push the existing comments
+
+
 // // const displayComments = () => {
 //     for (let i = 0; i <= comments.length - 1; i++) {
+
 //         let mainCommentContainer = document.createElement('div');
 //         mainCommentContainer.classList.add('main__comment-container');
 //         newComments.appendChild(mainCommentContainer);
@@ -86,6 +139,9 @@ displayComments = (object) => {
 //         mainCommentComment.className = 'main__comment-comment';
 //         mainCommentComment.innerText = comments[i].comment;
 //         document.querySelector('.main__comment-one-container').appendChild(mainCommentComment);
+
+
+
 //     // } // closing curly brace of displayComments function
 // };
 //     // to push a comment to be displayed on the website
