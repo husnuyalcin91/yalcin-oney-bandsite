@@ -41,19 +41,27 @@ mainForm.addEventListener("submit", (event => {
         .then(result => {
             // console.log(result);
             const defaultComments = result.data;
+            
             defaultComments.push({
                 name: nameInput,
                 comment: commentInput
             });
             defaultComments.forEach( item => {
                 displayComments(item)
+            });
+            axios.post(`${api}/comments?api_key=${apiKey}`, {
+                name: nameInput,
+                comment: commentInput
+            })
+            .then(() => {
+                
             })
         })
         .catch (error => {
             console.log(error);
         })
     
-}))
+}));
 
 displayComments = (object) => {
     // declare the section variable
@@ -100,15 +108,3 @@ displayComments = (object) => {
     mainCommentComment.classList.add('main__comment-comment');
     mainComment.appendChild(mainCommentComment);
 };
-
-// axios - post comments
-// axios.post(`${api}/comments?api_key=${apiKey}`, {
-//     name: "Arthur Shelby",
-//     comment: "Peaky Blinders were thoroughly entertained. Keep it up!"
-// })
-// .then(() => {
-    
-// })
-// .catch (error => {
-//     console.log(error);
-// });
