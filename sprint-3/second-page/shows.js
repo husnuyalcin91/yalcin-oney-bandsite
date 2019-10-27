@@ -1,3 +1,6 @@
+//todos
+//(1) find a way to display the dates
+
 // variables
 let api = 'https://project-1-api.herokuapp.com';
 // apiKey retrieved using the browser

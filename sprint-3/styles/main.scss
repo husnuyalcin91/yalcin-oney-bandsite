@@ -652,6 +652,16 @@ body {
         }
     }
 
+    &__comment-date {
+        @include tablet() {
+            padding-left: 10%;
+        }
+
+        @include desktop() {
+            padding-left: 10%;
+        }
+    }
+
     &__comment-comment {
         @include tablet() {
             padding-left: 20px;

@@ -1,10 +1,9 @@
-//to-do list
-//(1) prevent axios.post comment from posting everytime the page reloads
-//(2) ensure preventDefault and posting a comment through the website form works
-//(3) make sure the last comment displays at the top
-//(4) make the date to appear on shows js
-//(5) deal with the alignment issue with the shows page display
-//(6) remove the console log`s at the end
+//to-dos
+//(1) ensure preventDefault and posting a comment through the website form works
+//-> do not allow empty comments to be posted
+//-> store the comment made together with the defaultComments
+
+//(i) remove the console log`s at the end
 
 // variables
 let api = 'https://project-1-api.herokuapp.com';
@@ -29,6 +28,33 @@ getComments = () => {
 
 getComments();
 
+// post a comment to the website
+const mainForm = document.querySelector(".main__form");
+
+mainForm.addEventListener("submit", (event => {
+    event.preventDefault();
+
+    let nameInput = event.target.name.value;
+    let commentInput = event.target.comment.value; 
+    
+        axios.get(`${api}/comments?api_key=${apiKey}`)
+        .then(result => {
+            // console.log(result);
+            const defaultComments = result.data;
+            defaultComments.push({
+                name: nameInput,
+                comment: commentInput
+            });
+            defaultComments.forEach( item => {
+                displayComments(item)
+            })
+        })
+        .catch (error => {
+            console.log(error);
+        })
+    
+}))
+
 displayComments = (object) => {
     // declare the section variable
     let mainNewComments = document.querySelector(".main__new-comments");
@@ -36,7 +62,7 @@ displayComments = (object) => {
     // creation of the main comment container
     let mainCommentContainer = document.createElement("div");
     mainCommentContainer.classList.add('main__comment-container');
-    mainNewComments.appendChild(mainCommentContainer);
+    mainNewComments.prepend(mainCommentContainer);
 
     // creation of the form image
     let mainFormImage = document.createElement("img");
@@ -77,18 +103,12 @@ displayComments = (object) => {
 
 // axios - post comments
 // axios.post(`${api}/comments?api_key=${apiKey}`, {
-//     "name": "Arthur Shelby",
-//     "comment": "Peaky Blinders were thoroughly entertained. Keep it up!"
+//     name: "Arthur Shelby",
+//     comment: "Peaky Blinders were thoroughly entertained. Keep it up!"
 // })
 // .then(() => {
     
 // })
-// .get(`${api}/comments?api_key=${apiKey}`)
-
-
-// // sprint 2 below here
-
-// let mainForm = document.querySelector(".main__form");
-// // to avoid the submit event to refresh the page
-// mainForm.addEventListener("submit",(event => {
-//     event.preventDefault();
+// .catch (error => {
+//     console.log(error);
+// });
