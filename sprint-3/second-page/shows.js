@@ -7,9 +7,7 @@ let apiKey = 'aa9aa8c6-78b6-4300-8414-e8c9e176d654';
 getShows = () => {
     axios.get(`${api}/showdates?api_key=${apiKey}`)
     .then(response => {
-        // console.log(response);
         const showInfo = response.data;
-        console.log(showInfo)
         showInfo.forEach( show => {
             shows(show)
         })

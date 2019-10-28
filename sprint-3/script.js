@@ -1,7 +1,3 @@
-//to-dos
-//(1) do not allow empty comments to be posted
-//(2) remove the console log`s at the end
-
 // variables
 let api = 'https://project-1-api.herokuapp.com';
 // apiKey retrieved using the browser
@@ -11,9 +7,7 @@ let apiKey = 'aa9aa8c6-78b6-4300-8414-e8c9e176d654';
 getComments = () => {
     axios.get(`${api}/comments?api_key=${apiKey}`)
     .then(result => {
-        // console.log(result);
         const defaultComments = result.data;
-        console.log(defaultComments)
         defaultComments.forEach( item => {
             displayComments(item)
         })
@@ -36,7 +30,6 @@ mainForm.addEventListener("submit", (event => {
 
         axios.get(`${api}/comments?api_key=${apiKey}`)
         .then(result => {
-            // console.log(result);
             const defaultComments = result.data;
             
             defaultComments.push({
@@ -46,7 +39,7 @@ mainForm.addEventListener("submit", (event => {
             defaultComments.forEach( item => {
                 displayComments(item)
             });
-// store the comment posted in the api
+// store the comment-posted in the api
             axios.post(`${api}/comments?api_key=${apiKey}`, {
                 name: nameInput,
                 comment: commentInput

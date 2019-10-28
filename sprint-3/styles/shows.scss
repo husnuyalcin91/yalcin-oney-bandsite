@@ -23,8 +23,6 @@
 $font-bold: "Avenir-Bold";
 $font-demi: "Avenir-Demi";
 
-// move the variables to a separate file, master scss file (2/3)
-
 // mobile text size and line height variables
 $header-text-mobile: 24px;
 $header-line-mobile: 32px;
@@ -53,10 +51,6 @@ $labels-text-desk: 12px;
 $labels-line-desk: 20px;
 
 // media query variables
-
-// change breakpoints if necessary (*/*)
-// from mobile to tablet some elements are causing white space, check that (1/3)
-
 $max-mobile-width: 426px;
 $max-tablet-width: 769px;
 $desktop-width: "screen and (min-width: #{$max-tablet-width})";
@@ -334,7 +328,7 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
         }
 
         @include desktop() {
-            width: 160px;
+            width: 20%;
             height: 48px;
             margin-bottom: 20px;
         }

@@ -362,7 +362,7 @@
 
 @media screen and (min-width: 769px) {
   .main__tickets {
-    width: 160px;
+    width: 20%;
     height: 48px;
     margin-bottom: 20px;
   }
