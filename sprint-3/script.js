@@ -1,9 +1,6 @@
 //to-dos
-//(1) ensure preventDefault and posting a comment through the website form works
-//-> do not allow empty comments to be posted
-//-> store the comment made together with the defaultComments
-
-//(i) remove the console log`s at the end
+//(1) do not allow empty comments to be posted
+//(2) remove the console log`s at the end
 
 // variables
 let api = 'https://project-1-api.herokuapp.com';
@@ -36,7 +33,7 @@ mainForm.addEventListener("submit", (event => {
 
     let nameInput = event.target.name.value;
     let commentInput = event.target.comment.value; 
-    
+
         axios.get(`${api}/comments?api_key=${apiKey}`)
         .then(result => {
             // console.log(result);
@@ -49,18 +46,19 @@ mainForm.addEventListener("submit", (event => {
             defaultComments.forEach( item => {
                 displayComments(item)
             });
+// store the comment posted in the api
             axios.post(`${api}/comments?api_key=${apiKey}`, {
                 name: nameInput,
                 comment: commentInput
             })
             .then(() => {
-                
+                event.target.name.value = '';
+                event.target.comment.value = ''
             })
         })
         .catch (error => {
             console.log(error);
         })
-    
 }));
 
 displayComments = (object) => {

@@ -1,6 +1,3 @@
-//todos
-//(1) find a way to display the dates
-
 // variables
 let api = 'https://project-1-api.herokuapp.com';
 // apiKey retrieved using the browser
@@ -41,7 +38,7 @@ shows = (object) => {
 
     // creation of the date element
     let mainDate = document.createElement('h2');
-    mainDate.innertext = object.date;
+    mainDate.innerText = (object.date) + ", 2019";
     mainDate.classList.add('main__date');
     mainShow.appendChild(mainDate);
 

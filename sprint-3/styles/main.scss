@@ -604,22 +604,23 @@ body {
     }
 
     &__comment-container {
+        border-top: 1px solid #323232;
+
         @include mobile() {
             display: flex;
             margin: 24px 16px;
-            border-top: 1px solid #323232;
             padding-top: 24px;
         }
         
         @include tablet() {
             display: flex;
-            margin-left: 0;
+            margin: 0 50px;
             padding-top: 24px;
         }
 
         @include desktop() {
             display: flex;
-            margin-left: 0;
+            margin: 0 87px;
             padding-top: 24px;
         }
     }
@@ -641,14 +642,12 @@ body {
             width: 88%;
             padding-left: 20px;
             display: flex;
-            border-top: 1px solid #323232;
         }
 
         @include desktop() {
             width: 88%;
             padding-left: 20px;
             display: flex;
-            border-top: 1px solid #323232;
         }
     }
 

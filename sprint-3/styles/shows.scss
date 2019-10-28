@@ -198,7 +198,7 @@ $desktop-width: "screen and (min-width: #{$max-tablet-width})";
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
-            margin: 70px 16px 20px;
+            margin: 120px 16px 20px;
         }
 
         @include desktop() {

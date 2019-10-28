@@ -724,13 +724,16 @@ body {
   margin-top: 32px;
 }
 
+.main__comment-container {
+  border-top: 1px solid #323232;
+}
+
 @media screen and (max-width: 425px) {
   .main__comment-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin: 24px 16px;
-    border-top: 1px solid #323232;
     padding-top: 24px;
   }
 }
@@ -740,7 +743,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 0;
+    margin: 0 50px;
     padding-top: 24px;
   }
 }
@@ -750,7 +753,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 0;
+    margin: 0 87px;
     padding-top: 24px;
   }
 }
@@ -780,7 +783,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    border-top: 1px solid #323232;
   }
 }
 
@@ -791,7 +793,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    border-top: 1px solid #323232;
   }
 }
 
